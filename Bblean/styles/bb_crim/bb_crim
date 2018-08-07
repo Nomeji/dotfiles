@@ -1,0 +1,133 @@
+! Stylefile for blackbox
+
+!-- info --
+style.name:	bb_crim
+style.author: apathyrecharge
+style.date:	02 Aug 2012
+style.credits: nobody but the epitome of excellence	(aka me) deserves any credit for anything
+style.comments:	an awesome theme for awesome people
+
+!-- background --
+rootCommand: bsetroot -solid #a68c8d
+
+!-- toolbar --
+toolbar.appearance: flat vertical
+toolbar.color1: #222222
+toolbar.color2: #222222
+toolbar.textColor: #cccaca
+toolbar.marginWidth: 1
+toolbar.font: ProggyTinyTTSZ
+toolbar.fontHeight:	10
+toolbar.alignment: center
+toolbar.label.appearance: flat vertical
+toolbar.label.color1: #222222
+toolbar.label.color2: #222222
+toolbar.label.textColor: #a16a71
+toolbar.label.marginWidth: 1
+toolbar.windowLabel.appearance: flat vertical
+toolbar.windowLabel.color1: #222222
+toolbar.windowLabel.color2: #222222
+toolbar.windowLabel.textColor: #a16a71
+toolbar.clock.appearance: flat vertical
+toolbar.clock.color1: #222222
+toolbar.clock.color2: #222222
+toolbar.clock.textColor: #cccaca
+toolbar.button.appearance: flat vertical
+toolbar.button.color1: #222222
+toolbar.button.color2: #222222
+toolbar.button.foregroundColor:	#a16a71
+toolbar.button.marginWidth: 1
+toolbar.button.pressed.appearance: flat vertical
+toolbar.button.pressed.color1: #222222
+toolbar.button.pressed.color2: #222222
+toolbar.button.pressed.foregroundColor:	#7c4333
+
+!-- menu --
+menu.title.appearance: flat vertical
+menu.title.color1: #222222
+menu.title.color2: #222222
+menu.title.textColor: #cccaca
+menu.title.marginWidth: 1
+menu.title.font: Blank
+menu.title.fontHeight: 13
+menu.title.alignment: center
+menu.title.borderColor: #222222
+menu.title.borderWidth: 1
+menu.frame.appearance: flat vertical
+menu.frame.foregroundColor: #222222
+menu.frame.textColor: #cccaca
+menu.frame.disabledColor: #000000
+menu.frame.borderColor: #222222
+menu.frame.borderWidth: 1
+menu.frame.marginWidth: 2
+menu.frame.font: Calibri
+menu.frame.fontHeight: 12
+menu.frame.alignment: left
+menu.frame.color1: #222222
+menu.frame.color2: #222222
+menu.active.appearance: flat vertical
+menu.active.color1: #222222
+menu.active.color2: #222222
+menu.active.foregroundColor: #bbbbbb
+menu.active.textColor: #8d8d88
+menu.active.borderColor: #222222
+menu.active.borderWidth: 1
+menu.active.marginWidth: 2
+menu.bullet: empty
+menu.bullet.position: right
+
+!-- window --
+window.title.focus.appearance: flat vertical
+window.title.focus.color1: #373737
+window.title.focus.color2: #2d2d2d
+window.label.focus.appearance: flat vertical
+window.label.focus.color1: #373737
+window.label.focus.color2: #2d2d2d
+window.label.focus.textColor: #9e5050
+window.handle.focus.appearance: flat vertical
+window.handle.focus.color1: #2e2e2e
+window.handle.focus.color2: #373737
+window.grip.focus.appearance: flat vertical
+window.grip.focus.color1: #2e2e2e
+window.grip.focus.color2: #373737
+window.button.focus.appearance: flat vertical
+window.button.focus.color1: #373737
+window.button.focus.color2: #2d2d2d
+window.button.focus.foregroundColor: #9e5050
+window.button.pressed.appearance: sunken vertical
+window.button.pressed.color1: #222222
+window.button.pressed.color2: #222222
+window.button.pressed.foregroundColor: #9e5050
+window.button.pressed.borderColor: #222222
+window.button.pressed.borderWidth: 1
+window.title.unfocus.appearance: flat vertical
+window.title.unfocus.color1: #373737
+window.title.unfocus.color2: #2d2d2d
+window.title.unfocus.borderColor: #222222
+window.title.unfocus.borderWidth: 1
+window.label.unfocus.appearance: flat vertical
+window.label.unfocus.color1: #373737
+window.label.unfocus.color2: #2d2d2d
+window.label.unfocus.textColor: #000000
+window.handle.unfocus.appearance: flat vertical
+window.handle.unfocus.color1: #2d2d2d
+window.handle.unfocus.color2: #2d2d2d
+window.handle.unfocus.borderColor: #222222
+window.handle.unfocus.borderWidth: 1
+window.grip.unfocus.appearance: parentrelative border
+window.grip.unfocus.borderColor: #222222
+window.grip.unfocus.borderWidth: 1
+window.button.unfocus.appearance: flat vertical
+window.button.unfocus.color1: #373737
+window.button.unfocus.color2: #2d2d2d
+window.button.unfocus.foregroundColor: #9e5050
+window.title.marginWidth: 2
+window.label.marginWidth: 0
+window.button.marginWidth: 0
+window.frame.focus.borderColor: #222222
+window.frame.unfocus.borderColor: #222222
+window.frame.borderWidth: 0
+window.handleHeight: 2
+window.font: blank
+window.fontHeight: 15
+window.alignment: left

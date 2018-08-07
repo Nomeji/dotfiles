@@ -1,0 +1,57 @@
+[begin] (Menu)
+	[submenu] (Internet)
+		[exec] (Firefox) firefox
+		[exec] (TeamSpeak) {"%userprofile%\Logiciels\TeamSpeak 3 Client\ts3client_win64.exe"}
+		[exec] (Skype) {"c:\Program Files (x86)\Skype\Phone\Skype.exe"}
+		[exec] (Thunderbird) Thunderbird
+		[exec] (HexChat) {"c:\Logiciels\HexChat\hexchat.exe"}
+		[exec] (Chromium) {"c:\Logiciels\chromium\bin\chrome.exe"}
+		[exec] (JDownloader) {"%userprofile%\Logiciels\JDownloader\JDownloader2.exe"}
+	[end]
+	[submenu] (Audio)
+		[exec] (fb2k) {"c:\Logiciels\foobar2000\foobar2000.exe"}
+		[exec] (Sythesia) {"%userprofile%\Logiciels\Synthesia\Synthesia.exe"}
+		[exec] (Audacity) {"c:\Program Files (x86)\Audacity\audacity.exe"}
+	[end]
+	[submenu](Pictures)
+		[exec] (Photoshop) {"c:\Program Files\Adobe\Adobe Photoshop CC 2015.5\Photoshop.exe"}
+		[exec] (Inkscape) {"%userprofile%\Logiciels\Inkscape\inkscape.exe"}
+		[exec] (HoneyView) {"%userprofile%\Logiciels\HoneyView3\HoneyView3.exe"}
+	[end]
+	[submenu] (Video)
+		[exec] (MPC) {"C:\Program Files (x86)\Combined Community Codec Pack\MPC\mpc-hc.exe"}
+	[end]
+	[path] (Edit) {"c:\Logiciels\Bblean\lnk\Edit"}
+	[path] (Games) {"c:\Logiciels\Bblean\lnk\Jeux"}
+	[submenu] (Tools)
+		[exec] (Horloge) {c:\Logiciels\Bblean\lnk\horloge.lnk}
+		[exec] (Task) {C:\Windows\System32\taskmgr.exe}
+		[exec] (Terminal) {"%userprofile%\Logiciels\Console2\Console.exe"}
+		[exec] (Notepad) {notepad}
+		[exec] (Sublime Text) {"%userprofile%\Logiciels\Sublime Text 3\sublime_text.exe"}
+		[exec] (GitHub) {"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\GitHub, Inc\Git Shell.lnk"}
+		[exec] (Calculator) {calc}
+		[exec] (Daemon Tools) {"c:\ProgramData\Microsoft\Windows\Start Menu\Programs\DAEMON Tools Lite\Daemon Tools Lite.lnk"}
+		[exec] (Screenshot) {SnippingTool}
+	[end]
+	[path] (/b/) {c:\Logiciels}
+	[path] (Start) {STARTMENU|COMMON_STARTMENU}
+	[submenu] (Config)
+		[submenu] (bbLean)
+			[config] (Configuration)
+			[reconfig] (Reconfigure)
+			[restart] (Restart)
+			[exit]  (Quit)
+		[end]
+		[exec] (Control Panel) {control}
+		[exec] (Wacom) {"C:\Program Files\Tablet\Wacom\Professional_CPL.exe"}
+	[end]
+	[exec] (Total Cmd) {"c:\Logiciels\totalcmd\TOTALCMD64.exe"}
+	[submenu] (Bye-nee!!)
+		[logoff] (Logoff)
+		[switchuser] (Switch user)
+		[suspend] (Standby)
+		[reboot] (Reboot)
+		[shutdown] (Shutdown)
+	[end]
+[end]
