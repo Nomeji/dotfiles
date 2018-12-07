@@ -1,0 +1,42 @@
+#theme = "plain"
+icons = "awesome"
+
+[theme]
+name = "plain"
+[theme.overrides]
+idle_bg = "#000817"
+
+[[block]]
+block = "cpu"
+
+[[block]]
+block = "temperature"
+
+[[block]]
+block = "memory"
+format_mem = "{Mup}%"
+display_type = "memory"
+
+[[block]]
+block = "memory"
+format_swap = "{SUp}%"
+display_type = "swap"
+
+# [[block]]
+# block = "net"
+# device = "wlp4s0"
+# interval = 30
+
+[[block]]
+block = "sound"
+
+[[block]]
+block = "custom"
+command = "~/.config/i3status-rs/soundcard-name.sh"
+# on_click = "/home/nomeji/.config/i3status-rs/soundcard-toggle.sh"
+on_click = "~/.config/i3status-rs/soundcard-toggle.sh"
+
+[[block]]
+block = "time"
+format = "%a %d %h %y | %H:%M"
+interval = 60
