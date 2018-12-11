@@ -1,8 +1,9 @@
 vo=gpu
+gpu-context=wayland
 #profile=gpu-hq
 #hwdec=vdpau
 screenshot-format=png
 #x11-bypass-compositor=no
 
-alang=jp,en,fr
-slang=fr,en
+alang=fre,jpn,eng
+slang=fre,eng
