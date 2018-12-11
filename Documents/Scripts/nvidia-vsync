@@ -1,0 +1,1 @@
+nvidia-settings --assign CurrentMetaMode=LVDS-0-1:1366x768_60 +0+0 { ForceFullCompositionPipeline = On }, HDMI-0:1920x1080_60 +1920+0 { ForceFullCompositionPipeline = On }

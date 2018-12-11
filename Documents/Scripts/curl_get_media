@@ -1,0 +1,2 @@
+curl website.com > cc
+cat cc | grep -oE '<a href=".*(.jpg|.png|.webm)" ' | cut -d\" -f2 | while read l; do curl "$l" -o "${l##*/}"; done

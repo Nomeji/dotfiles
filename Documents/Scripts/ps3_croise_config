@@ -1,0 +1,2 @@
+sudo ip addr add 192.168.1.1/24 broadcast 192.168.1.255 dev enp3s0
+sudo ip link set enp3s0 up

@@ -1,0 +1,2 @@
+cd /sys/class/backlight/acpi_video0/
+echo 10 | sudo tee brightness

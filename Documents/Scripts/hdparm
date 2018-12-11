@@ -1,0 +1,3 @@
+# Power saving for hard drive
+sudo hdparm -B 50 /dev/sda
+sudo hdparm -S 12 /dev/sda
