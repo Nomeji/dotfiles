@@ -1,0 +1,13 @@
+## mkvmerge "Ping Pong the Animation Épisode 10*.mp4" --language "0:fre" --track-name "0:French" *5*.frFR.ass --language "0:ger" --track-name "0:German" *5*.deDE.ass --language "0:en" --track-name "0:English" *5*.enUS.ass --language "0:spa" --track-name "0:Spanish" *5*.esES.ass -o test.mp4
+
+for i in *.mp4;
+  do name=`echo $i | cut -d'.' -f1`;
+  echo $name;
+  mkvmerge "$i" --language "0:fra" --track-name "0:French" "$name.frFR.ass" -o "$name.mkv";
+done
+
+for i in *.avi;
+  do name=`echo $i | cut -d'.' -f1`;
+  echo $name;
+  mkvmerge "$i" --language "0:fra" --track-name "0:French" lyrics/"$name.ass" -o "$name.mkv";
+done

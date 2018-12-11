@@ -1,0 +1,11 @@
+# Convert avi to move and keep file name without extension
+for i in *.avi;
+  do name=`echo $i | cut -d'.' -f1`;
+  echo $name;
+  ffmpeg -i $i $name.mov;
+done
+
+# Merge audio and video from list of mp4 and aac
+for i in *.mp4, for j in *.aac; do
+	ffmpeg -i $i -i $j $i.mp4
+done
