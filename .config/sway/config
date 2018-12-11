@@ -238,11 +238,11 @@ bar {
         # statusline #223877
         background #000817
         focused_workspace #36437c #36437c #ffffff
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        inactive_workspace #323232 #323232 #5c5c5c
     }
 }
 
-client.focused #36437c #36437c #ffffff #2e9ef4 #36437c
+client.focused #000817 #000817 #ffffff #2e9ef4 #36437c
 
 font ProFont 9
 

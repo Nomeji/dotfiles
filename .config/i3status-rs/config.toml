@@ -5,6 +5,12 @@ icons = "awesome"
 name = "plain"
 [theme.overrides]
 idle_bg = "#000817"
+info_bg = "#000817"
+separator_bg = "#000817"
+good_bg = "#000817"
+warning_bg = "#000817"
+critical_bg = "#000817"
+# alternating_tint_bg = "#000817"
 
 [[block]]
 block = "cpu"
