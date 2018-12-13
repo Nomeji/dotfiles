@@ -1,0 +1,7 @@
+tp-ssh1.dep-informatique.u-psud.fr
+tp-ssh2.dep-informatique.u-psud.fr
+tp-ssh3.dep-informatique.u-psud.fr
+
+ssh -X -l
+
+sshfs _LOGIN_COURT_@tp-ssh1.dep-informatique.u-psud.fr:/home/tp-home003/dnguye2 /mnt/nomeji/
