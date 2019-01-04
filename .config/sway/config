@@ -242,7 +242,7 @@ bar {
     }
 }
 
-client.focused #000817 #000817 #ffffff #2e9ef4 #36437c
+client.focused #000817 #000817 #ffffff #000817 #000817
 
 font ProFont 9
 
