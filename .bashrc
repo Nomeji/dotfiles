@@ -10,3 +10,6 @@ PS1='[\u@\h \W]\$ '
 
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
+
+alias vim=nvim
+alias vi=nvim
