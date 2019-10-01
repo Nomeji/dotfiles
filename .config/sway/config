@@ -14,18 +14,19 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term urxvt
+set $term termite
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 # set $menu dmenu_path | dmenu | xargs swaymsg exec
-set $menu j4-dmenu-desktop | xargs swaymsg exec
+set $menu j4-dmenu-desktop
+# set $menu "GDK_BACKEND=x11 ulauncher"
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in __DATADIR__/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output DVI-I-2 bg ~/Pictures/Wallpapers/jesse2x_1.png fill
-output DVI-I-1 bg ~/Pictures/Wallpapers/jesse2x_2.png fill
+output DVI-I-2 bg ~/Pictures/Wallpapers/osaka.jpg fill
+output DVI-I-1 bg ~/Pictures/Wallpapers/kon.jpg fill
 #
 # Example configuration:
 #
@@ -37,13 +38,13 @@ output DVI-I-1 bg ~/Pictures/Wallpapers/jesse2x_2.png fill
 #
 # Example configuration:
 #
+set $lock 'swaylock -i ~/Pictures/Wallpapers/5cm.png'
 exec swayidle \
-    timeout 300 'swaylock -i ~/Pictures/Wallpapers/5cm.png' \
     timeout 600 'swaymsg "output * dpms off"' \
        resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -i ~/Pictures/Wallpapers/5cm.png'
+    before-sleep $lock
 
-bindsym $mod+Escape exec swaylock -i ~/Pictures/Wallpapers/5cm.png
+bindsym $mod+Escape exec $lock
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 600 seconds, and turn your screens back on when
@@ -122,6 +123,19 @@ input * {
 #
 # Workspaces:
 #
+    # right
+    workspace 1 output DVI-I-1
+    workspace 2 output DVI-I-1
+    workspace 3 output DVI-I-1
+    workspace 4 output DVI-I-1
+    workspace 5 output DVI-I-1
+    # left
+    workspace 6 output DVI-I-2
+    workspace 7 output DVI-I-2
+    workspace 8 output DVI-I-2
+    workspace 9 output DVI-I-2
+    workspace 10 output DVI-I-2
+
     # switch to workspace
     bindsym $mod+ampersand workspace 1
     bindsym $mod+eacute workspace 2
@@ -219,12 +233,15 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioStop exec mpc stop
 
+set $screenshot 'grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +%y%m%d_%H%M_%N | cut -c-14).png'
+bindsym Print exec $screenshot
+
 #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-    font ProFont, FontAwesome 9
+    font Anonymous, FontAwesome 8
     position top
 
     # When the status_command prints a new line to stdout, swaybar updates.
@@ -244,7 +261,7 @@ bar {
 
 client.focused #000817 #000817 #ffffff #000817 #000817
 
-font ProFont 9
+font Anonymous 8
 
 # Gaps
 gaps inner 5
