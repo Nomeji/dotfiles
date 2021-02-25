@@ -1,11 +1,13 @@
 #!/bin/bash
-default_sink=$(pacmd list-sinks | grep "*" | cut -d " " -f5)
+default_sink=$(pactl info | grep "Default Sink" | cut -d " " -f3)
+sinks=$(pactl list sinks | grep Name | cut -d " " -f2)
 
-if [[ $default_sink -eq 1 ]]; then
-	new_default=0
-else
-	new_default=1
-fi
+for sink in $sinks; do
+	if [ $default_sink != $sink ]; then
+		new_default=$sink
+		return
+	fi
+done
 
 pactl set-default-sink $new_default
 
