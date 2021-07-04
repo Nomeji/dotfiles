@@ -28,12 +28,12 @@ info = 65
 
 [[block]]
 block = "memory"
-format_mem = "{Mup}%"
+format_mem = "{mem_used_percents}"
 display_type = "memory"
 
 [[block]]
 block = "memory"
-format_swap = "{SUp}%"
+format_swap = "{swap_used_percents}"
 display_type = "swap"
 
 # [[block]]
