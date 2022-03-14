@@ -18,7 +18,7 @@ set $term termite
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
 # set $menu dmenu_path | dmenu | xargs swaymsg exec
-set $menu j4-dmenu-desktop
+set $menu wofi --show drun -i
 # set $menu "GDK_BACKEND=x11 ulauncher"
 
 ### Output configuration
@@ -72,6 +72,9 @@ input * {
 	xkb_variant oss
     accel_profile flat
     pointer_accel 0
+
+input 1267:10961:ELAN2513:00_04F3:2AD1 {
+    map_to_output eDP-1
 }
 
 input 1386:17:Wacom_Graphire2_4x5_Pen {
@@ -241,11 +244,14 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 # music controls (special keys on keyboard)
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioPrev exec playerctl prev
 bindsym XF86AudioStop exec playerctl stop
 
 set $screenshot 'grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +%y%m%d_%H%M_%N | cut -c-14).png'
 bindsym Print exec $screenshot
+
+bindsym $mod+semicolon exec wofi-emoji
 
 #
 # Status Bar:
@@ -272,12 +278,17 @@ bar {
 
 client.focused #000817 #000817 #ffffff #000817 #000817
 
-font AnonymousPro 8
+font DejavuSansMono, AnonymousPro 8
+seat * xcursor_theme Adwaita
 
 # Gaps
-gaps inner 5
+gaps inner 3
+
+for_window [title="Firefox — Sharing Indicator"] kill
+for_window [app_id="pavucontrol"] floating enabled
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh
+exec mako
 
 include /etc/sway/config.d/*
