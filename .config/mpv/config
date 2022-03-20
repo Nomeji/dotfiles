@@ -4,6 +4,7 @@ gpu-context=wayland
 #hwdec=vdpau
 screenshot-format=png
 #x11-bypass-compositor=no
+script-opts-append=ytdl_hook-ytdl_path=yt-dlp
 
 alang=fre,jpn,eng
 slang=fre,eng
