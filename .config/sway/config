@@ -72,6 +72,7 @@ input * {
 	xkb_variant oss
     accel_profile flat
     pointer_accel 0
+    tap enable
 }
 
 input 1267:10961:ELAN2513:00_04F3:2AD1 {
