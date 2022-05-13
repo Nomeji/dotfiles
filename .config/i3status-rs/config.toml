@@ -50,7 +50,10 @@ command = "~/.config/i3status-rs/soundcard-name.sh"
 # on_click = "/home/nomeji/.config/i3status-rs/soundcard-toggle.sh"
 on_click = "~/.config/i3status-rs/soundcard-toggle.sh"
 
+# [[block]]
+# block = "battery"
+
 [[block]]
 block = "time"
 format = "%a %d %h %y | %H:%M"
-interval = 60
+interval = 1
