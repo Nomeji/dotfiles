@@ -250,7 +250,7 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioPrev exec playerctl prev
 bindsym XF86AudioStop exec playerctl stop
 
-set $screenshot 'grim -g "$(slurp)" ~/Pictures/Screenshots/$(date +%y%m%d_%H%M_%N | cut -c-14).png'
+set $screenshot 'grim -g "$(slurp)" - | wl-copy --type image/png'
 bindsym Print exec $screenshot
 
 bindsym $mod+semicolon exec wofi-emoji
@@ -262,6 +262,7 @@ bindsym $mod+semicolon exec wofi-emoji
 bar {
     font AnonymousPro, FontAwesome6Free 8
     position top
+    height 17
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
@@ -288,6 +289,7 @@ gaps inner 3
 
 for_window [title="Firefox — Sharing Indicator"] kill
 for_window [app_id="pavucontrol"] floating enabled
+for_window [app_id="iwgtk"] floating enabled
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec /usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh

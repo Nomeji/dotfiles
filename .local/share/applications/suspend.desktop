@@ -1,6 +1,6 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Suspend
+Name=suspend
 Exec=systemctl suspend
 Terminal=False
