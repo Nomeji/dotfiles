@@ -9,6 +9,8 @@ alias ls='ls --color=auto'
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 6)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 6)\]\h \[$(tput setaf 4)\]\W\[$(tput setaf 1)\]]\\$ \[$(tput sgr0)\]"
 
+export SSH_AGENT_PID=""
+export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/gnupg/S.gpg-agent.ssh"
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
@@ -17,3 +19,4 @@ export EDITOR="$VISUAL"
 alias vim=nvim
 alias vi=nvim
 alias pastebin="curl -F c=@- https://ptpb.pw"
+export PATH=$PATH:~/.local/bin

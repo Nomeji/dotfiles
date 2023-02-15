@@ -1,9 +1,8 @@
 vo=gpu
 gpu-context=wayland
 #profile=gpu-hq
-#hwdec=vdpau
+hwdec=auto
 screenshot-format=png
-#x11-bypass-compositor=no
 script-opts-append=ytdl_hook-ytdl_path=yt-dlp
 
 alang=fre,jpn,eng
