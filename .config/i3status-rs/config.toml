@@ -1,5 +1,5 @@
 [theme]
-name = "plain"
+theme = "plain"
 [theme.overrides]
 idle_bg = "#000817"
 info_bg = "#000817"
@@ -10,36 +10,33 @@ critical_bg = "#000817"
 # alternating_tint_bg = "#000817"
 
 [icons]
-name = "awesome5"
+icons = "awesome6"
 
 [[block]]
 block = "music"
-hide_when_empty = true
-on_click = "playerctl play-pause"
-max_width = 50
-dynamic_width = true
+format = "{ $icon $combo.str(max_w:50,rot_interval:0.5) |}"
+[[block.click]]
+button = "left"
+cmd = "playerctl play-pause"
 
 [[block]]
 block = "cpu"
 
 [[block]]
 block = "temperature"
+format = " $icon $average "
+format_alt = " $icon $average avg, $max max "
 info = 65
 
 [[block]]
 block = "memory"
-format_mem = "{mem_used_percents}"
-display_type = "memory"
+format = " $icon $mem_used_percents $icon_swap $swap_used_percents "
+format_alt = " $icon $mem_used.eng(w:3,u:B,p:M)/$mem_total.eng(w:3,u:B,p:M)($mem_used_percents.eng(w:2)) $icon_swap $swap_used.eng(w:3,u:B,p:M)/$swap_total.eng(w:3,u:B,p:M)($swap_used_percents.eng(w:2)) "
 
 [[block]]
-block = "memory"
-format_swap = "{swap_used_percents}"
-display_type = "swap"
-
-# [[block]]
-# block = "net"
-# device = "wlp4s0"
-# interval = 30
+block = "net"
+device = "wlan0"
+format_alt = " $icon $ssid$frequency \uf012 $signal_strength "
 
 [[block]]
 block = "sound"
@@ -47,13 +44,14 @@ block = "sound"
 [[block]]
 block = "custom"
 command = "~/.config/i3status-rs/soundcard-name.sh"
-# on_click = "/home/nomeji/.config/i3status-rs/soundcard-toggle.sh"
-on_click = "~/.config/i3status-rs/soundcard-toggle.sh"
+[[block.click]]
+button = "left"
+cmd = "~/.config/i3status-rs/soundcard-toggle.sh"
 
-# [[block]]
-# block = "battery"
+[[block]]
+block = "battery"
 
 [[block]]
 block = "time"
-format = "%a %d %h %y | %H:%M"
+format = " ^icon_calendar $timestamp.datetime(f:'%a %d %h %y') $icon $timestamp.datetime(f:'%H:%M') "
 interval = 1
