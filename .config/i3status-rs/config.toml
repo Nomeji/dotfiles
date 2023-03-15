@@ -44,9 +44,6 @@ block = "sound"
 [[block]]
 block = "custom"
 command = "~/.config/i3status-rs/soundcard-name.sh"
-[[block.click]]
-button = "left"
-cmd = "~/.config/i3status-rs/soundcard-toggle.sh"
 
 [[block]]
 block = "battery"

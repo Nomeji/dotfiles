@@ -1,0 +1,6 @@
+#!/bin/sh
+
+id=$(pw-dump | jq -r '.[].info.props | select(."media.class" == "Audio/Sink") | [."node.description", ."object.id"] | @tsv'\
+| wofi --show dmenu\
+| cut -d'	' -f2)
+wpctl set-default "$id"
