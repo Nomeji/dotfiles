@@ -17,7 +17,13 @@ block = "music"
 format = "{ $icon $combo.str(max_w:50,rot_interval:0.5) |}"
 [[block.click]]
 button = "left"
-cmd = "playerctl play-pause"
+action = "play_pause"
+[[block.click]]
+button = "right"
+action = "next_player"
+[[block.click]]
+button = "middle"
+action = "next"
 
 [[block]]
 block = "cpu"
